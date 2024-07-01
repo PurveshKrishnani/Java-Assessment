@@ -1,12 +1,13 @@
 package Assignment4;
 
-public class Employee {
-
+public abstract class Employee {
 
 
     private String name;
     private  Integer employeeId;
     private  double  salary;
+
+    public abstract void setSalary(double salary);
 
     private enum  ManagerType{;
         private String HR;
@@ -56,9 +57,6 @@ public class Employee {
         return salary;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
 
 
 }

@@ -7,7 +7,7 @@ import java.util.Optional;
 public class Espncricinfo {
 
 
-    static final int size = 50;
+    private static final int size = 50;
     List<Batsman> batsmans = new ArrayList<>();
     int noOfBatsmen;
 

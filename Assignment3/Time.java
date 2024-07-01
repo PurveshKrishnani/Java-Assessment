@@ -1,26 +1,45 @@
 package Assignment3;
 
 import java.util.concurrent.TimeUnit;
-
+import  java.util.Scanner;
 public class Time {
 
+
+    private Integer h1 , m1,s1;
+    private Integer h2,m2,s2;
+
+
+    private void input() {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first time (hh:mm:ss): ");
+        String time1 = scanner.nextLine();
+        String[] time1Parts = time1.split(":");
+        h1 = Integer.parseInt(time1Parts[0]);
+        m1 = Integer.parseInt(time1Parts[1]);
+        s1 = Integer.parseInt(time1Parts[2]);
+
+        System.out.print("Enter the second time (hh:mm:ss): ");
+        String time2 = scanner.nextLine();
+        String[] time2Parts = time2.split(":");
+        h2 = Integer.parseInt(time2Parts[0]);
+        m2 = Integer.parseInt(time2Parts[1]);
+        s2 = Integer.parseInt(time2Parts[2]);
+    }
+
+
     public Time() {
-        this.hh = 0;
-        this.mm = 0;
-        this.ss = 0;
+        this.h1 = h1;
+        this.m1 = m1;
+        this.s1 = s1;
+        this.h2 = h2;
+        this.m2 = m2;
+        this.s2 = s2;
     }
 
-    public Time(Integer hh, Integer mm, Integer ss) {
-        this.hh = hh;
-        this.mm = mm;
-        this.ss = ss;
-    }
 
-    private Integer hh;
-    private Integer mm;
-    private Integer ss;
-
-    public void  timeDifference(int h1 , int m1, int s1 , int h2, int m2,int s2)
+    public void  timeDifference()
     {
        int timeOne = h1*60*60 + m1*60 + s1;
        int timeTwo =  h2*60*60 + m2*60 + s2;
@@ -42,6 +61,9 @@ public class Time {
 
     public static void main(String[] args) {
         Time time = new Time();
-        time.timeDifference(4, 40, 21, 2, 55, 40);
+        time.input();
+        time.timeDifference();
     }
+
+
 }
