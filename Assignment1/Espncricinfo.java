@@ -7,7 +7,6 @@ import java.util.Optional;
 public class Espncricinfo {
 
 
-
     static final int size = 50;
     List<Batsman> batsmans = new ArrayList<>();
     int noOfBatsmen;
@@ -30,12 +29,9 @@ public class Espncricinfo {
        }
     }
 
-    public void setBatsmans(List<Batsman> batsmans) {
-        this.batsmans = batsmans;
-    }
 
     public int getNoOfBatsmen() {
-        return noOfBatsmen;
+        return batsmans.size();
     }
 
     public Optional<Batsman> updateBatsmanStats(int id, int centuries, int halfCenturies) {
@@ -86,6 +82,8 @@ public class Espncricinfo {
             espncricinfo.updateBatsmanStats(1000,40,90);
             espncricinfo.getBatsmans();
             System.out.println("");
+
+            System.out.println("No  of batsman in array  is " + espncricinfo.getNoOfBatsmen());
 
 
             System.out.println(espncricinfo.getBatsman(100001));

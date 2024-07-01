@@ -2,8 +2,6 @@ package Assignment1;
 
 public class Batsman {
 
-
-
     private  int  Id;
     public String name;
     public  int  runsScored;
@@ -39,9 +37,6 @@ public class Batsman {
         this.centuries = centuries;
         this.halfCenturies = halfCenturies;
     }
-
-
-
 
 
     public void setName(String name) {
