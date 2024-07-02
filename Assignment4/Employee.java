@@ -1,6 +1,6 @@
 package Assignment4;
 
-public abstract class Employee {
+public  class Employee {
 
     private  Integer employeeId;
     private  double  salary;
